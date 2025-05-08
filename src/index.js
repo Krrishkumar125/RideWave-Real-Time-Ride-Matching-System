@@ -10,6 +10,10 @@ const {redisClient} = require('./utils/redisClient');
 const authRoutes = require('./routes/authRoutes');
 const passengerRoutes = require('./routes/passengerRoutes');
 const driverRoutes = require('./routes/driverRoutes');
+const bookingRoutes = require('./routes/bookingRoutes');
+
+const LocationService = require('./services/locationService');
+const locationService = new LocationService();
 
 dotenv.config();
 
@@ -31,6 +35,7 @@ connect();
 app.use('/api/auth', authRoutes);
 app.use('/api/passenger', passengerRoutes);
 app.use('/api/driver' , driverRoutes);
+app.use('/api/booking' , bookingRoutes(io));
 
 server.listen(process.env.PORT , async()=>{
     console.log(`Server started on PORT ${process.env.PORT}`);
