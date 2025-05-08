@@ -7,6 +7,7 @@ const connect = require('./utils/db');
 const {redisClient} = require('./utils/redisClient');
 
 const authRoutes = require('./routes/authRoutes');
+const passengerRoutes = require('./routes/passengerRoutes');
 
 dotenv.config();
 
@@ -20,6 +21,7 @@ app.use(express.static('public'));
 connect();
 
 app.use('/api/auth', authRoutes);
+app.use('/api/passenger', passengerRoutes);
 
 server.listen(process.env.PORT , async()=>{
     console.log(`Server started on PORT ${process.env.PORT}`);
