@@ -6,6 +6,8 @@ const cors = require('cors');
 const connect = require('./utils/db');
 const {redisClient} = require('./utils/redisClient');
 
+const authRoutes = require('./routes/authRoutes');
+
 dotenv.config();
 
 const app = express();
@@ -16,6 +18,8 @@ app.use(express.json());
 app.use(express.static('public'));
 
 connect();
+
+app.use('/api/auth', authRoutes);
 
 server.listen(process.env.PORT , async()=>{
     console.log(`Server started on PORT ${process.env.PORT}`);
