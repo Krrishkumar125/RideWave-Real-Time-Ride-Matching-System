@@ -1,6 +1,6 @@
 const BookingRepository = require('../repository/bookingRepository');
 const LocationService = require('./locationService');
-const driverRepository = require('../repository/driverRepostory');
+const driverRepository = require('../repository/driverRepository');
 
 class DriverService{
     constructor(){
