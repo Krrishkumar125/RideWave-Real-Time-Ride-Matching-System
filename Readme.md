@@ -129,7 +129,7 @@ RATE_PER_KM=1.2
 Backend Engineer | B.Tech CSE @ AKGEC
 [GitHub](https://github.com/KrrishKumar125)
 [LinkedIn](https://www.linkedin.com/in/krrishkumar125/)
-[mailto:krrishkumar2028@gmail.com](mailto:krrishkumar2028@gmail.com)
+[mailto:krrishkumar200803@gmail.com](mailto:krrishkumar200803@gmail.com)
 
 ---
 
